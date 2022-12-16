@@ -1,15 +1,15 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
+  max-width: 945px;
+  margin-inline: auto;
 `;
 
 export const Nav = styled.nav`
   padding: 30px 0px;
   display: flex;
-  gap: 20px;
-  justify-content: space-evenly;
+
+  justify-content: space-between;
   @media (max-width: 560px) {
     display: none;
   }
@@ -27,11 +27,11 @@ export const NavElem1 = styled.div`
 `;
 
 export const Title = styled.div`
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin: 40px 0px;
   display: flex;
-  gap: 180px;
+
   @media (max-width: 560px) {
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@ export const Title = styled.div`
   }
 `;
 export const AboutH1 = styled.h1`
-  font-size: 40px;
+  font-size: 46px;
   font-weight: 700;
   letter-spacing: 2px;
 `;
@@ -50,6 +50,7 @@ export const TitleName = styled.div`
   display: flex;
   flex-direction: column;
   font-weight: 600;
+  max-width: 145px;
 
   @media (max-width: 560px) {
     margin: 20px 0px;
@@ -59,30 +60,53 @@ export const TitleName = styled.div`
 export const Languages = styled.div`
   font-weight: 700;
   writing-mode: vertical-lr;
+
   @media (max-width: 600px) {
     display: none;
   }
 `;
-export const Ru = styled.span`
-  color: #828282;
-  font-weight: bold;
+export const LanguagesMob = styled.div`
+  font-weight: 700;
+  writing-mode: vertical-lr;
+  position: absolute;
+  top: 310px;
+  left: 173px;
 `;
 
-export const Image = styled.div`
+export const MobUa = styled.span`
+  color: #828282;
+`;
+
+export const Eng = styled.span`
+  ${({ isActive }) =>
+    isActive
+      ? css`
+          color: black;
+        `
+      : css`
+          color: #828282;
+          font-weight: bold;
+        `}
+`;
+
+export const Ua = styled.span`
+  ${({ isActive }) =>
+    isActive
+      ? css`
+          color: black;
+        `
+      : css`
+          color: #828282;
+          font-weight: bold;
+        `}
+`;
+export const Image = styled.picture`
   display: flex;
   justify-content: center;
   margin-bottom: 110px;
-  @media (max-width: 550px) {
-    display: none;
-  }
 `;
-
-export const Image1 = styled.div`
-  display: none;
-  @media (max-width: 550px) {
-    display: flex;
-    justify-content: center;
-  }
+export const Foto = styled.img`
+  max-width: 100%;
 `;
 
 export const AboutMe = styled.div`
@@ -96,10 +120,14 @@ export const AboutT = styled.h1`
   font-size: 42px;
 `;
 
+export const DescriptionContainer = styled.div`
+  max-width: 530px;
+  margin-inline: auto;
+`;
 export const Description = styled.div`
   margin: 40px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 `;
 
 export const Working = styled.div`
@@ -167,6 +195,8 @@ export const BlockItem = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 110px;
+  align-items: center;
   width: max-content;
   @media (max-width: 1000px) {
     margin-bottom: 30px;
@@ -192,6 +222,7 @@ export const MediaImg = styled.img`
 export const H1 = styled.h1`
   margin-top: 80px;
   margin-bottom: 50px;
+  padding-top: 50px;
 `;
 
 export const PortfolioText = styled.div`
@@ -200,9 +231,19 @@ export const PortfolioText = styled.div`
   text-decoration: underline;
 `;
 
+export const LastPortfolioText = styled.div`
+  margin-top: 30px;
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  text-decoration: underline;
+`;
+
 export const ContactsText = styled.div`
+  max-width: 370px;
+  font-size: 19px;
+  margin-inline: auto;
+  margin-bottom: 100px;
   text-align: center;
-  margin: 100px 0px;
 `;
 
 export const ContactsTitle = styled.h1`
@@ -217,9 +258,11 @@ export const ContactsButton = styled.button`
   background-color: black;
   color: white;
   border-radius: 20px;
-  padding: 8px 17px;
+  padding: 12px 42px;
   border: none;
   margin-top: 8px;
+  font-size: 18px;
+  cursor: pointer;
 `;
 
 export const Img = styled.div`
@@ -233,7 +276,7 @@ export const Menu = styled.div`
   position: relative;
   width: 30px;
   height: 20px;
-  left: 340px;
+  left: 300px;
   bottom: 154px;
 
   @media (min-width: 550px) {
@@ -243,34 +286,73 @@ export const Menu = styled.div`
     position: relative;
     width: 30px;
     height: 20px;
-    left: 265px;
+    left: 260px;
     bottom: 154px;
   }
 `;
-export const MenuBurger = styled.div`
-  ::before {
-    content: "";
-    background-color: black;
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    left: 0;
+
+export const Link = styled.div`
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @media (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
   }
-  ::after {
-    content: "";
-    background-color: black;
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    top: 20px;
+`;
+
+export const GitHub = styled.a`
+  text-decoration: none;
+  color: #1a237e;
+`;
+
+export const Design = styled.a`
+  text-decoration: none;
+  color: #ff8a80;
+  padding: 7px;
+  background-color: black;
+  border: 1px #ff8a80 solid;
+`;
+
+export const DesignWrapper = styled.div`
+  margin: 20px 0px;
+`;
+
+export const SidebarWrapper = styled.div`
+  position: absolute;
+  background-color: white;
+  width: 100vw;
+  height: 520vh;
+  display: flex;
+  align-items: baseline;
+  transition: transform 2s ease;
+  font-weight: 700;
+  font-size: 20px;
+
+  ul {
+    margin: 60px 25px;
   }
 
-  span {
-    content: "";
-    background-color: black;
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    top: 10px;
+  li {
+    :first-child {
+      color: black;
+    }
+    list-style-type: none;
+    margin-bottom: 20px;
+    color: #828282;
+    font-size: 22px;
   }
+  ${({ isOpen }) =>
+    isOpen
+      ? css`
+          transform: translateX(0);
+        `
+      : css`
+          transform: translateX(100vw);
+        `}
+`;
+export const SidebarButton = styled.div`
+  cursor: pointer;
+  margin: 60px 25px;
 `;

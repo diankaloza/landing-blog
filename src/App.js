@@ -1,6 +1,6 @@
 import { Home } from "./components/HomePage";
 
-import GlobalStyles from "./components/styles/global";
+import GlobalStyles from "./styles/global";
 
 function App() {
   return (

@@ -8,20 +8,22 @@ import {
   PortfolioText,
   Media,
   MediaImg,
-} from "../styles/styles";
+  LastPortfolioText,
+} from "../../styles/styles";
+import { t } from "../../languages";
 
 export const Portfolio = () => {
   return (
     <Portfolio1>
-      <H1>Portfolio</H1>
+      <H1>{t("title.portfolio")}</H1>
       <Media>
         <MediaImg src={WorkFoto} alt="foto" />
       </Media>
-      <PortfolioText>Online fashion store - Homepage</PortfolioText>
+      <PortfolioText>{t("title.store1")}</PortfolioText>
       <MediaImg src={WorkFoto1} alt="reebook" />
-      <PortfolioText>Reebok Store - Concept</PortfolioText>
+      <PortfolioText>{t("title.store2")}</PortfolioText>
       <MediaImg src={WorkFoto2} alt="braun" />
-      <PortfolioText>Braun Landing Page - Concept</PortfolioText>
+      <LastPortfolioText>{t("title.store3")}</LastPortfolioText>
     </Portfolio1>
   );
 };

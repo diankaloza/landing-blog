@@ -14,13 +14,14 @@ import {
   AdFoto,
   AdIl,
   AdE,
-} from "../styles/styles";
+} from "../../styles/styles";
+import { t } from "../../languages";
 
 export const Skills = () => {
   return (
     <Working>
-      <Skill>Skills</Skill>
-      <SkillDesc>I work in such programs as</SkillDesc>
+      <Skill>{t("title.skills")}</Skill>
+      <SkillDesc>{t("title.work")}</SkillDesc>
       <SkillsContainer>
         <BlockItem>
           <AdFoto>
