@@ -78,6 +78,7 @@ export const MobUa = styled.span`
 `;
 
 export const Eng = styled.span`
+  cursor: pointer;
   ${({ isActive }) =>
     isActive
       ? css`
@@ -90,6 +91,7 @@ export const Eng = styled.span`
 `;
 
 export const Ua = styled.span`
+  cursor: pointer;
   ${({ isActive }) =>
     isActive
       ? css`
@@ -320,13 +322,14 @@ export const DesignWrapper = styled.div`
 `;
 
 export const SidebarWrapper = styled.div`
-  position: absolute;
+  position: fixed;
+  top: 0;
   background-color: white;
   width: 100vw;
-  height: 520vh;
+  height: 100vh;
   display: flex;
   align-items: baseline;
-  transition: transform 2s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
   font-weight: 700;
   font-size: 20px;
 
@@ -347,9 +350,11 @@ export const SidebarWrapper = styled.div`
     isOpen
       ? css`
           transform: translateX(0);
+          opacity: 1;
         `
       : css`
           transform: translateX(100vw);
+          opacity: 0;
         `}
 `;
 export const SidebarButton = styled.div`

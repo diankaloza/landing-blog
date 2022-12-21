@@ -38,6 +38,8 @@ export const Home = () => {
 
   const openSidebar = () => {
     setIsOpen(true);
+    console.log("open function");
+    console.log(isOpen);
   };
   const closeSidebar = () => {
     setIsOpen(false);
@@ -45,7 +47,7 @@ export const Home = () => {
   return (
     <div>
       <Container>
-        {isOpen && <Sidebar isOpen={isOpen} onClose={closeSidebar} />}
+        <Sidebar isOpen={isOpen} onClose={closeSidebar} />
         <Header />
         <hr />
         <Title>
