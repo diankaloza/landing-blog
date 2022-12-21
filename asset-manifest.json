@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/landing-blog/static/js/main.6b07d82f.js",
+    "main.js": "/landing-blog/static/js/main.927c0dab.js",
     "static/media/Title.png": "/landing-blog/static/media/Title.e117303440c018ea6caa.png",
     "static/media/reebok_web.png": "/landing-blog/static/media/reebok_web.556bf4021a35aa34518b.png",
     "static/media/braun.png": "/landing-blog/static/media/braun.982dc6fc026e3af0712a.png",
@@ -12,9 +12,9 @@
     "index.html": "/landing-blog/index.html",
     "static/media/Star.svg": "/landing-blog/static/media/Star.4769ac3fe40ec86867f1899f1a48536a.svg",
     "static/media/Star (1).svg": "/landing-blog/static/media/Star (1).7ef400d5d3eb6291271329278643ab02.svg",
-    "main.6b07d82f.js.map": "/landing-blog/static/js/main.6b07d82f.js.map"
+    "main.927c0dab.js.map": "/landing-blog/static/js/main.927c0dab.js.map"
   },
   "entrypoints": [
-    "static/js/main.6b07d82f.js"
+    "static/js/main.927c0dab.js"
   ]
 }
